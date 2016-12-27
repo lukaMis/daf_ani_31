@@ -1,0 +1,194 @@
+%!Adobe-FontList 1.18
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Arial-BoldMT
+FamilyName:Arial
+StyleName:Bold
+MenuName:Arial
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Arial Bold
+WritingScript:Roman
+OutlineFileName:\Arial Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:751104
+FileModTime:1274733357
+NameArray:0,Mac,4,Arial Bold
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialMT
+FamilyName:Arial
+StyleName:Regular
+MenuName:Arial
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Arial
+WritingScript:Roman
+OutlineFileName:\Arial.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:774476
+FileModTime:1274733357
+NameArray:0,Mac,4,Arial
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:BlackJack
+FamilyName:Black Jack
+StyleName:Regular
+MenuName:Black Jack
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Black Jack
+WritingScript:Roman
+OutlineFileName:\blackjack.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:29132
+FileModTime:1478831706
+NameArray:0,Mac,18,Black Jack
+NameArray:0,Mac,4,Black Jack
+NameArray:0,Win,1,Black Jack
+NameArray:0,Win,16,Black Jack
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Desyrel
+FamilyName:Desyrel
+StyleName:Regular
+MenuName:Desyrel
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Desyrel
+WritingScript:Roman
+OutlineFileName:\desyrel.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:90928
+FileModTime:1463065590
+NameArray:0,Mac,4,Desyrel
+NameArray:0,Win,1,Desyrel
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:NexaRustSlab-BlackShadow01
+FamilyName:Nexa Rust Slab
+StyleName:Black Shadow 01
+MenuName:Nexa Rust Slab Black Shadow 01
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:Nexa Rust Slab Black Shadow 01
+WritingScript:Roman
+OutlineFileName:\NexaRustSlab-BlackShadow01.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:864968
+FileModTime:1410867102
+NameArray:0,Mac,4,Nexa Rust Slab Black Shadow 01
+NameArray:0,Win,1,Nexa Rust Slab Black Shadow 01
+NameArray:0,Win,16,Nexa Rust Slab
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SourceSansPro-Regular
+FamilyName:Source Sans Pro
+StyleName:Regular
+MenuName:Source Sans Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Source Sans Pro
+WritingScript:Roman
+OutlineFileName:\SourceSansPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:102376
+FileModTime:1472805759
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro
+NameArray:0,Win,1,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:WebHostingHub-Glyphs
+FamilyName:WebHostingHub-Glyphs
+StyleName:Regular
+MenuName:WebHostingHub-Glyphs
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:WebHostingHub-Glyphs
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Emoji
+OutlineFileName:\webhostinghub-glyphs.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:309004
+FileModTime:1370355562
+NameArray:0,Mac,4,WebHostingHub-Glyphs
+NameArray:0,Win,1,WebHostingHub-Glyphs
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:WebSymbols-Regular
+FamilyName:Web Symbols
+StyleName:Regular
+MenuName:Web Symbols
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Web Symbols Regular
+WritingScript:Roman
+OutlineFileName:\WebSymbols-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:26792
+FileModTime:1464096138
+NameArray:0,Mac,4,Web Symbols Regular
+NameArray:0,Win,1,Web Symbols
+%EndFont
+
