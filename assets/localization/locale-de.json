@@ -9,46 +9,37 @@
     
     "cards" : [
       {
-        "card" : {
-          "front" : "card-0-0",
-          "left" : "card-0-1",
-          "right" : "card-0-2",
-          "audio" : "31-3"
-        }
+        "front" : "card-0-0",
+        "left" : "card-0-1",
+        "right" : "card-0-2",
+        "audio" : "31-3"
       },
       {
-        "card" : {
-          "front" : "card-1-0",
-          "left" : "card-1-1",
-          "right" : "card-1-2",
-          "audio" : "31-2"
-        }
+        "front" : "card-1-0",
+        "left" : "card-1-1",
+        "right" : "card-1-2",
+        "audio" : "31-2"
       },
       {
-        "card" : {
-          "front" : "card-2-0",
-          "left" : "card-2-1",
-          "right" : "card-2-2",
-          "audio" : "31-6"
-        }
+        "front" : "card-2-0",
+        "left" : "card-2-1",
+        "right" : "card-2-2",
+        "audio" : "31-6"
       },
       {
-        "card" : {
-          "front" : "card-3-0",
-          "left" : "card-3-1",
-          "right" : "card-3-2",
-          "audio" : "31-4"
-        }
+        "front" : "card-3-0",
+        "left" : "card-3-1",
+        "right" : "card-3-2",
+        "audio" : "31-4"
       },
       {
-        "card" : {
-          "front" : "card-3-0",
-          "left" : "card-3-1",
-          "right" : "card-3-2",
-          "audio" : "31-5"
-        }
+        "front" : "card-4-0",
+        "left" : "card-4-1",
+        "right" : "card-4-2",
+        "audio" : "31-5"
       }
     ]
+
   }
 
 }

@@ -44,15 +44,15 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
 }
 
 
-.card .card-side.front {
-  background-image: url('../images/cards/card-0-0.svg');
-}
-.card .card-side.left {
-  background-image: url('../images/cards/card-0-1.svg');
-}
-.card .card-side.right {
-  background-image: url('../images/cards/card-0-2.svg');
-}
+// .card .card-side.front {
+//   background-image: url('../images/cards/card-0-0.svg');
+// }
+// .card .card-side.left {
+//   background-image: url('../images/cards/card-0-1.svg');
+// }
+// .card .card-side.right {
+//   background-image: url('../images/cards/card-0-2.svg');
+// }
 
 
 .card .card-side.front {
@@ -73,12 +73,24 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
 }
 
 
+.card.opacity-0 {
+  opacity: 0;
+}
+
 .card.active {
   top: 50%;
   left: 50%;
   transform: scale(1) translate(-50%, -50%) rotateY(0deg) !important;
   z-index: 10 !important;
 }
+
+.card[data-open="true"] {
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, -50%) rotateY(0deg) !important;
+  z-index: 10 !important;
+}
+
 
 .card.active .card-side.front {
   transform: rotateY(-180deg);
@@ -90,6 +102,19 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
   visibility: visible;
 }
 .card.active .card-side.right {
+  // transform: translateX($cardWidth);
+}
+
+.card[data-open="true"] .card-side.front {
+  transform: rotateY(-180deg);
+  visibility: hidden;
+}
+.card[data-open="true"] .card-side.left {
+  transform: rotateY(0deg) translateX(-$cardWidth);
+  z-index: 3;
+  visibility: visible;
+}
+.card[data-open="true"] .card-side.right {
   // transform: translateX($cardWidth);
 }
 
@@ -116,59 +141,66 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
 
 
 
-
-
-#card-0 .card-side.front {
-  background-image: url('../images/cards/card-0-0.svg');
-}
-#card-0 .card-side.left {
-  background-image: url('../images/cards/card-0-1.svg');
-}
-#card-0 .card-side.right {
-  background-image: url('../images/cards/card-0-2.svg');
-}
-
-#card-1 .card-side.front {
-  background-image: url('../images/cards/card-1-0.svg');
-}
-#card-1 .card-side.left {
-  background-image: url('../images/cards/card-1-1.svg');
-}
-#card-1 .card-side.right {
-  background-image: url('../images/cards/card-1-2.svg');
-}
-
-#card-2 .card-side.front {
-  background-image: url('../images/cards/card-2-0.svg');
-}
-#card-2 .card-side.left {
-  background-image: url('../images/cards/card-2-1.svg');
-}
-#card-2 .card-side.right {
-  background-image: url('../images/cards/card-2-2.svg');
+// hover
+.card .card-side:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 
-#card-3 .card-side.front {
-  background-image: url('../images/cards/card-3-0.svg');
-}
-#card-3 .card-side.left {
-  background-image: url('../images/cards/card-3-1.svg');
-}
-#card-3 .card-side.right {
-  background-image: url('../images/cards/card-3-2.svg');
-}
 
 
-#card-4 .card-side.front {
-  background-image: url('../images/cards/card-4-0.svg');
-}
-#card-4 .card-side.left {
-  background-image: url('../images/cards/card-4-1.svg');
-}
-#card-4 .card-side.right {
-  background-image: url('../images/cards/card-4-2.svg');
-}
+// #card-0 .card-side.front {
+//   background-image: url('../images/cards/card-0-0.svg');
+// }
+// #card-0 .card-side.left {
+//   background-image: url('../images/cards/card-0-1.svg');
+// }
+// #card-0 .card-side.right {
+//   background-image: url('../images/cards/card-0-2.svg');
+// }
+
+// #card-1 .card-side.front {
+//   background-image: url('../images/cards/card-1-0.svg');
+// }
+// #card-1 .card-side.left {
+//   background-image: url('../images/cards/card-1-1.svg');
+// }
+// #card-1 .card-side.right {
+//   background-image: url('../images/cards/card-1-2.svg');
+// }
+
+// #card-2 .card-side.front {
+//   background-image: url('../images/cards/card-2-0.svg');
+// }
+// #card-2 .card-side.left {
+//   background-image: url('../images/cards/card-2-1.svg');
+// }
+// #card-2 .card-side.right {
+//   background-image: url('../images/cards/card-2-2.svg');
+// }
+
+
+// #card-3 .card-side.front {
+//   background-image: url('../images/cards/card-3-0.svg');
+// }
+// #card-3 .card-side.left {
+//   background-image: url('../images/cards/card-3-1.svg');
+// }
+// #card-3 .card-side.right {
+//   background-image: url('../images/cards/card-3-2.svg');
+// }
+
+
+// #card-4 .card-side.front {
+//   background-image: url('../images/cards/card-4-0.svg');
+// }
+// #card-4 .card-side.left {
+//   background-image: url('../images/cards/card-4-1.svg');
+// }
+// #card-4 .card-side.right {
+//   background-image: url('../images/cards/card-4-2.svg');
+// }
 
 
 #card-0 {
