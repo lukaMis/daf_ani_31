@@ -1,5 +1,5 @@
 
-daf_ani_31.CardsControl = () => {
+daf_ani_31.CardsControl = (config) => {
 
   'use strict';
   const instance = {};
@@ -13,12 +13,16 @@ daf_ani_31.CardsControl = () => {
   let cardData;
   let cardsVisible = 0;
 
+  let clickedCardId;
+  let $currentCard;
+
+  const soundControl = config.soundControl;
+
   const loadCards = (data) => {
     maxCards = data.length;
     cardData = data;
     processCard(cardData[cardCounter]);
   };
-
 
   const processCard = (card) => {
     console.log(card);
@@ -103,12 +107,90 @@ daf_ani_31.CardsControl = () => {
     if(cardsVisible === maxCards) {
       console.log('all the cards visible');
       $(instance).trigger('onCardsReady');
+      addListnerToCards();
     }
   };
+
+  const addListnerToCards = () => {
+    $('.card').on('click', cardClickedHandler);
+  };
+
+  const removeListnerFromCards = () => {
+    $('.card').off('click', cardClickedHandler);
+  };
+
+  const cardClickedHandler = (e) => {
+    removeListnerFromCards();
+    clickedCardId = $(e.currentTarget)[0].id.slice(-1);
+    handleCard(clickedCardId);
+  };
+
+  const handleCard = (id) => {
+    $currentCard = $('#card-' + id);
+    
+    $currentCard.one('transitionend', onCardIsOpen);
+
+    $currentCard.attr({
+      'data-open' : true
+    });
+    $('#contentWrapper').attr({
+      "data-cardselected" : true
+    });
+  };
+
+  const onCardIsOpen = (e) => {
+    $currentCard.off('transitionend', onCardIsOpen);
+    console.log('card is open');
+    
+    setTimeout(() => {
+      $(instance).trigger('onCardIsOpen');
+    }, daf_ani_31.CARD_OPEN_AUDIO_DELAY);
+  };
+
+  const playAudio = () => {
+    $(soundControl).one('onAudioCompleted', onAudioCompletedHandler);
+    soundControl.play( $currentCard.attr('data-audio') );
+  };
+
+  const onAudioCompletedHandler = (e) => {
+    console.log('marker onAudioCompleted');
+    $(instance).trigger('onAudioCompleted');
+  };
+
+  const enableCloseCard = () => {
+    $currentCard.one('click', closecardHandler);
+  };
+
+  const closecardHandler = (e) => {
+    $currentCard.one('transitionend', onCardIsClosed);
+    $currentCard.attr({
+      'data-open' : false
+    });
+  };
+
+  const onCardIsClosed = (e) => {
+    $currentCard.off('transitionend', onCardIsClosed);
+    console.log('card is closed');
+    setTimeout(() => {
+      $('#contentWrapper').attr({
+        "data-cardselected" : false
+      });
+      $(instance).trigger('onCardIsClosed');
+      addListnerToCards();
+    }, daf_ani_31.CARD_CLOSED_LISTNERS_DELAY );
+  };
+
+
 
   /* API */
   instance.init = (data) => {
     loadCards(data);
+  };
+  instance.play = () => {
+    playAudio();
+  };
+  instance.enableCloseCard = () => {
+    enableCloseCard();
   };
   
   console.log('CardsControl ready');

@@ -4,6 +4,7 @@
 // @prepros-append DataHandler.js
 // @prepros-append SoundControl.js
 // @prepros-append CardsControl.js
+// @prepros-append TitleControl.js
 
  // @prepros-append Controller.js
 

@@ -12,9 +12,24 @@ daf_ani_31.Bootstrap = () => {
     cardsControl.init( data.getCardsData() );
   });
 
-  const cardsControl = daf_ani_31.CardsControl();
+  const cardsControl = daf_ani_31.CardsControl({
+    soundControl: soundControl
+  });
   $(cardsControl).on('onCardsReady', (e) => {
     console.log('cards ready');
+    titleControl.init( data.getTitleData() );
+    controller.init();
+    daf_ani_31.removePreloader();
+  });
+
+  const titleControl = daf_ani_31.TitleControl({
+    soundControl: soundControl
+  });
+
+  const controller = daf_ani_31.Controller({
+    soundControl: soundControl,
+    cardsControl: cardsControl,
+    titleControl: titleControl
   });
 
 

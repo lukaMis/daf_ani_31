@@ -14,7 +14,7 @@ daf_ani_31.DataHandler = () => {
   instance.getCardsData = () => {
     return daf_ani_31.DATA.cards;
   };
-  instance.getTitle = () => {
+  instance.getTitleData = () => {
     return daf_ani_31.DATA.title;
   };
   
