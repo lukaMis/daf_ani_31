@@ -1,0 +1,157 @@
+
+
+#card-2 #card-2-0-cupcake {
+  animation-name: bounce;
+  transform-origin: center bottom;
+
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;
+}
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -20px, 0);
+  }
+  70% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+#card-2 #card-2-0-cupcake-shadow {
+  animation-name: shrink;
+  transform-origin: center center;
+  -moz-transform-origin: 50% 85%;
+
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;
+}
+
+@keyframes shrink {
+  from, 20%, 53%, 80%, to {
+    transform: scale(1);
+  }
+  40%, 43% {
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(0.6);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+}
+
+#card-2[data-open="true"] #card-2-0-cupcake,
+#card-2[data-open="true"] #card-2-0-cupcake-shadow {
+  animation-name: none;
+}
+
+
+// cupcake
+#card-2[data-open="true"] #card-2-1 #card-2-1-cupcake {
+  animation-name: fallDown;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 75%;
+}
+@keyframes fallDown {
+  0% { 
+    transform: translateY(-550px) scaleY(1);
+  }
+  80% { 
+    transform: translateY(0) scaleY(1);
+  }
+  90% { 
+    transform: translateY(0) scaleY(0.4);
+  }
+  100% { 
+    transform: translateY(0) scaleY(1);
+  }  
+}
+
+#card-2[data-open="true"] #card-2-1 #card-2-1-cupcake-shadow {
+  // opacity: 0;
+  animation-name: fallDownOpacity;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-delay: 1s;
+
+  opacity: 0;
+}
+@keyframes fallDownOpacity {
+  0% { 
+    opacity: 0;
+  }
+  80% { 
+    opacity: 0;
+  }
+  90% { 
+    opacity: 1;
+  } 
+  100% { 
+    opacity: 1;
+  }  
+}
+
+
+// DOTS
+#card-2[data-open="true"] #card-2-1-particles [id*="particle"] {
+  animation-name: rain;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-delay: -15s;
+}
+
+@for $i from 2 through 91 {
+  #card-2[data-open="true"] #card-2-1-particles #card-2-1-particle-#{$i} { 
+    animation-delay: -1s * $i;
+    animation-duration: 30s + $i;
+  }
+}
+
+
+#card-2[data-open="true"] #card-2-2-particles [id*="particle"] {
+  animation-name: rain;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 60s;
+}
+
+@for $i from 2 through 91 {
+  #card-2[data-open="true"] #card-2-2-particles #card-2-1-particle-#{$i} { 
+    animation-delay: -10.256s * $i;
+    animation-duration: 31.567s + $i;
+  }
+}

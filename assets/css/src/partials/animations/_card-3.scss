@@ -1,0 +1,112 @@
+
+
+#card-3 #card-3-0-fireworks [id*="firework"] {
+  animation-name: scale;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  // animation-delay: -15s;
+  transform-origin: 50% 50%;
+}
+#card-3 #card-3-0-fireworks #card-3-0-firework-0 {
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+#card-3 #card-3-0-fireworks #card-3-0-firework-1 {
+  animation-delay: 1s;
+}
+
+@keyframes scale {
+  0% { 
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#card-3[data-open="true"] #card-3-0-fireworks [id*="firework"] {
+  animation-name: none;
+}
+
+
+// cake pot
+#card-3[data-open="true"] #card-3-1 #card-3-1-dish {
+  animation-name: dishJump;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 1.5s;
+}
+@keyframes dishJump {
+  0% { 
+    transform: translateY(360px);
+  }
+  90% { 
+    transform: translateY(0px);
+  }
+  100% { 
+    transform: translateY(0px);
+  }
+}
+
+
+#card-3[data-open="true"] #card-3-1 #card-3-1-cake {
+  animation-name: cakeJump;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  // transform-origin: 50% 50%;
+}
+@keyframes cakeJump {
+  0% { 
+    transform: translateY(360px);
+  }
+  90% { 
+    transform: translateY(-60px);
+  }
+  100% { 
+    transform: translateY(0px);
+  }
+}
+
+
+// STARS
+#card-3[data-open="true"] #card-3-1-stuff [id*="star"] {
+  animation-name: fallingStars;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+}
+
+@keyframes fallingStars {
+  0% { 
+    transform: translateY(-430px);
+  }
+  100% { 
+    transform: translateY(0px);
+  }
+}
+
+
+@for $i from 0 through 10 {
+  #card-3[data-open="true"] #card-3-1-stuff #card-3-1-star-#{$i} { 
+    animation-delay: 1.5s + (0.2s * $i);
+  }
+}

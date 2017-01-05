@@ -1,0 +1,49 @@
+
+
+#card-4 #card-4-0-gifts [id*="gift"] {
+  transform-origin: center top;
+  animation-name: swing;
+
+  
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forward;
+
+  animation-timing-function: linear;
+  animation-duration: 10s;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+#card-4-0-gift-0 {
+  animation-delay: -1s;
+}
+#card-4-0-gift-1 {
+  animation-delay: -2s;
+}
+#card-4-0-gift-2 {
+  animation-delay: -4s;
+}
+#card-4-0-gift-3 {
+  animation-delay: -5s;
+}

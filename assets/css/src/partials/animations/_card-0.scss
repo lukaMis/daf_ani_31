@@ -1,0 +1,145 @@
+
+
+// HATS
+#card-0 #card-0-0 #card-0-0-hats [id*="hat"] {
+  animation-name: tada;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+// HAT 2
+#card-0 #card-0-0 #card-0-0-hats #card-0-0-hat-2 {
+  animation-delay: -4.5s;
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+#card-0[data-open="true"] #card-0-0 #card-0-0-hat-2 {
+  animation-name: none;
+}
+#card-0[data-open="true"] #card-0-0 #card-0-0-hat-0 {
+  animation-name: none;
+}
+#card-0[data-open="true"] #card-0-0 #card-0-0-hat-1 {
+  animation-name: none;
+}
+
+
+
+
+
+// dots
+#card-0[data-open="true"] ellipse {
+  animation-name: rain;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-delay: -15s;
+}
+
+@keyframes rain {
+  0% { 
+    transform: translateY(-666px);
+  }
+  100% { 
+    transform: translateY(666px);
+  }
+}
+
+// stars
+#card-0[data-open="true"] polygon {
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-direction: alternate;
+  
+  animation-fill-mode: forwards;
+  
+  animation-timing-function: ease;
+  animation-duration: 30s;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+  0% { 
+    transform: scale(1) rotate(0deg);
+  }
+  50% { 
+    transform: scale(2) rotate(360deg);
+  }
+  100% { 
+    transform: scale(0.5) rotate(0deg);
+  }
+}
+
+
+// fufki
+#card-0[data-open="true"] path {
+  animation-name: scale;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  // animation-direction: alternate;
+  
+  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
+  animation-fill-mode: both;
+  
+  animation-timing-function: ease-out;
+  animation-duration: 28s;
+  transform-origin: 50% 0%;
+  animation-delay: -2s;
+}
+
+// fufki right
+#card-0[data-open="true"] #card-0-2 path {
+  transform-origin: 50% 50%;
+}
+
+@keyframes scale {
+  0% { 
+    transform: scale(0);
+  }
+  50% { 
+    transform: scale(2);
+  }
+  100% { 
+    transform: scale(0);
+  }
+}
+
+#card-0[data-open="true"] #card-0-0 ellipse,
+#card-0[data-open="true"] #card-0-0 polygon,
+#card-0[data-open="true"] #card-0-0 path,
+#card-0[data-open="true"] #card-0-1-hats ellipse,
+#card-0[data-open="true"] #card-0-1-hats polygon,
+#card-0[data-open="true"] #card-0-1-hats path,
+#card-0[data-open="true"] #card-0-2-text ellipse,
+#card-0[data-open="true"] #card-0-2-text polygon,
+#card-0[data-open="true"] #card-0-2-text path,
+#card-0[data-open="true"] #card-0-2-hats ellipse,
+#card-0[data-open="true"] #card-0-2-hats polygon,
+#card-0[data-open="true"] #card-0-2-hats path {
+  animation-name: none;
+}
