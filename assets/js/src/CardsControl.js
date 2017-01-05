@@ -158,11 +158,11 @@ daf_ani_31.CardsControl = (config) => {
   };
 
   const enableCloseCard = () => {
-    $currentCard.one('click', closecardHandler);
+    $currentCard.one('click', closecardHandler).addClass('close-button');
   };
 
   const closecardHandler = (e) => {
-    $currentCard.one('transitionend', onCardIsClosed);
+    $currentCard.one('transitionend', onCardIsClosed).removeClass('close-button');
     $currentCard.attr({
       'data-open' : false
     });

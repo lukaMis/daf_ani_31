@@ -218,3 +218,26 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
 #card-4 {
   z-index: 1;
 }
+
+
+.card.close-button:after {
+  content: "X";
+  position: absolute;
+  
+  width: 40px;
+  height: 40px;
+  
+  background-color: rgb(45, 137, 185);
+  
+  color: rgb(255, 255, 255);
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+
+  top: -10px;
+  right: -10px;
+  
+  z-index: 1;
+  border-radius: 50%;
+}
