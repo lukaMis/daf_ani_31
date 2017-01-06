@@ -57,6 +57,23 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
   opacity: 0.42;
 }
 
+.card .card-side.card-side.right:before {
+  transform: rotate(180deg);
+}
+
+.card[data-open="true"] .card-side.card-side.left:after  {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+  box-shadow: -1px 0px 6px 0px rgba(0, 0, 0 , 0.5);
+  transform: scaleX(2);
+}
+
 
 .card .card-side.front {
   z-index: 2;
