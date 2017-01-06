@@ -1,6 +1,6 @@
 
 
-#card-1 #card-1-0 #card-1-0-balloons [id*="balloon"] {
+#contentWrapper[data-cardselected="false"] #card-1 #card-1-0 #card-1-0-balloons [id*="balloon"] {
   animation-name: balloonRising;
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -20,15 +20,15 @@
   }
 }
 
-#card-1 #card-1-0 #card-1-0-balloons [id*="balloon-0"] {
+#contentWrapper[data-cardselected="false"] #card-1 #card-1-0 #card-1-0-balloons [id*="balloon-0"] {
   animation-delay: -10s;
   animation-timing-function: ease-out;
 }
-#card-1 #card-1-0 #card-1-0-balloons [id*="balloon-1"] {
+#contentWrapper[data-cardselected="false"] #card-1 #card-1-0 #card-1-0-balloons [id*="balloon-1"] {
   animation-delay: -20s;
   animation-timing-function: ease-in;
 }
-#card-1 #card-1-0 #card-1-0-balloons [id*="balloon-2"] {
+#contentWrapper[data-cardselected="false"] #card-1 #card-1-0 #card-1-0-balloons [id*="balloon-2"] {
   animation-delay: -25s;
   animation-timing-function: ease;
 }
@@ -40,50 +40,85 @@
 
 // dots
 #card-1[data-open="true"] ellipse {
-  animation-name: rain;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: both;
+  // animation-name: rain;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
+  // animation-fill-mode: both;
 
-  animation-timing-function: linear;
-  animation-duration: 30s;
-  animation-delay: -15s;
+  // animation-timing-function: linear;
+  // animation-duration: 30s;
+  // animation-delay: -15s;
 }
 
 // stars
 #card-1[data-open="true"] #card-1-1-particles polygon {
-  animation-name: rotate;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-direction: alternate;
+  // animation-name: rotate;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
+  // animation-direction: alternate;
   
-  animation-fill-mode: forwards;
+  // animation-fill-mode: forwards;
   
-  animation-timing-function: ease;
-  animation-duration: 30s;
-  transform-origin: 50% 50%;
+  // animation-timing-function: ease;
+  // animation-duration: 30s;
+  // transform-origin: 50% 50%;
 }
 
 
 // fufki
 #card-1[data-open="true"] #card-1-1-particles path {
-  animation-name: scale;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  // animation-direction: alternate;
+  // animation-name: scale;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
+  // // animation-direction: alternate;
   
-  animation-fill-mode: forwards;
-  animation-fill-mode: backwards;
-  animation-fill-mode: both;
+  // animation-fill-mode: forwards;
+  // animation-fill-mode: backwards;
+  // animation-fill-mode: both;
   
-  animation-timing-function: ease-out;
-  animation-duration: 28s;
-  transform-origin: 50% 0%;
-  animation-delay: -2s;
+  // animation-timing-function: ease-out;
+  // animation-duration: 28s;
+  // transform-origin: 50% 0%;
+  // animation-delay: -2s;
 }
 
 
-#card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon"] {
+#card-1[data-open="true"] #card-1-1-particles > path,
+#card-1[data-open="true"] #card-1-1-particles > ellipse,
+#card-1[data-open="true"] #card-1-1-particles > polygon {
+  animation-name: rain;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 20s;
+}
+
+@for $i from 0 through 50 {
+  #card-1[data-open="true"] #card-1-1-particles > path:nth-child(#{$i}) { 
+    animation-delay: -10s * $i;
+    animation-duration: 20s + $i;
+  }
+  #card-1[data-open="true"] #card-1-1-particles > ellipse:nth-child(#{$i}) { 
+    animation-delay: -12s * $i;
+    animation-duration: 21s + $i;
+  }
+  #card-1[data-open="true"] #card-1-1-particles > polygon:nth-child(#{$i}) { 
+    animation-delay: -8s * $i;
+    animation-duration: 22s + $i;
+  }
+}
+
+
+
+
+
+
+
+
+
+#card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-0 {
   animation-name: balloonRisingWooble;
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -91,7 +126,6 @@
 
   animation-timing-function: linear;
   animation-duration: 30s;
-  // transform-origin: 50% 100%;
 }
 
 @keyframes balloonRisingWooble {
@@ -100,34 +134,27 @@
     animation-timing-function: ease-out;
   }
   25% { 
-    // transform: translateY(-666px);
   }
   50% { 
     transform: translate(100px, -103px);
     animation-timing-function: ease-in;
   }
-  75% { 
-    // transform: translateY(-666px);
+  75% {
   }
   100% { 
     transform: translate(-300px, -666px);
-    // animation-timing-function: ease;
   }
 }
 
-#card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-0"] {
-  // animation-delay: -20s;
-}
-#card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-1"] {
-  animation-delay: -18s;
-}
-#card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-2"] {
-  animation-delay: -7s;
-}
-
-#card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-1"] {
+#card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-2,
+#card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-1 {
   animation-name: balloonRisingWoobleMiddle;
-  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 30s;
 }
 @keyframes balloonRisingWoobleMiddle {
   0% { 
@@ -146,3 +173,29 @@
     transform: translate(300px, -666px);
   }
 }
+
+
+#card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-0 {
+  animation-delay: -10s;
+}
+#card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-2 {
+  animation-delay: -16s;
+}
+
+
+// #card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-0"] {
+//   animation-delay: -21s;
+// }
+// #card-1[data-open="true"] #card-1-1 #card-1-1-balloons #card-1-1-balloon-1 {
+//   animation-delay: -20s;
+//   // animation-delay: 0s;
+// }
+// #card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-2"] {
+//   // animation-delay: -7s;
+//   animation-delay: 0s;
+// }
+
+// #card-1[data-open="true"] #card-1-1 #card-1-1-balloons [id*="balloon-1"] {
+//   animation-name: balloonRisingWoobleMiddle;
+//   animation-delay: 0s;
+// }

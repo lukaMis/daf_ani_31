@@ -1,6 +1,6 @@
 
 
-#card-3 #card-3-0-fireworks [id*="firework"] {
+#contentWrapper[data-cardselected="false"] #card-3 #card-3-0-fireworks [id*="firework"] {
   animation-name: scale;
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -11,11 +11,11 @@
   // animation-delay: -15s;
   transform-origin: 50% 50%;
 }
-#card-3 #card-3-0-fireworks #card-3-0-firework-0 {
+#contentWrapper[data-cardselected="false"] #card-3 #card-3-0-fireworks #card-3-0-firework-0 {
   animation-duration: 4s;
   animation-delay: 2s;
 }
-#card-3 #card-3-0-fireworks #card-3-0-firework-1 {
+#contentWrapper[data-cardselected="false"] #card-3 #card-3-0-fireworks #card-3-0-firework-1 {
   animation-delay: 1s;
 }
 

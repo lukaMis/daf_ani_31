@@ -91,6 +91,10 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
   z-index: 10 !important;
 }
 
+.card[data-open="true"] {
+  // opacity: 0;
+}
+
 
 .card.active .card-side.front {
   transform: rotateY(-180deg);

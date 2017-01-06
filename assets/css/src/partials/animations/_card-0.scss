@@ -1,7 +1,7 @@
 
 
 // HATS
-#card-0 #card-0-0 #card-0-0-hats [id*="hat"] {
+#contentWrapper[data-cardselected="false"] #card-0 #card-0-0 #card-0-0-hats [id*="hat"] {
   animation-name: tada;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -9,7 +9,7 @@
 }
 
 // HAT 2
-#card-0 #card-0-0 #card-0-0-hats #card-0-0-hat-2 {
+#contentWrapper[data-cardselected="false"] #card-0 #card-0-0 #card-0-0-hats #card-0-0-hat-2 {
   animation-delay: -4.5s;
 }
 @keyframes tada {
@@ -45,20 +45,7 @@
 
 
 
-
-
 // dots
-#card-0[data-open="true"] ellipse {
-  animation-name: rain;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-
-  animation-timing-function: linear;
-  animation-duration: 30s;
-  animation-delay: -15s;
-}
-
 @keyframes rain {
   0% { 
     transform: translateY(-666px);
@@ -68,18 +55,63 @@
   }
 }
 
-// stars
-#card-0[data-open="true"] polygon {
-  animation-name: rotate;
+#card-0[data-open="true"] #card-0-1-particles > path,
+#card-0[data-open="true"] #card-0-1-particles > ellipse,
+#card-0[data-open="true"] #card-0-1-particles > polygon,
+
+#card-0[data-open="true"] #card-0-2-particles > path,
+#card-0[data-open="true"] #card-0-2-particles > ellipse,
+#card-0[data-open="true"] #card-0-2-particles > polygon {
+  animation-name: rain;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  animation-direction: alternate;
-  
   animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 20s;
+}
+
+@for $i from 0 through 50 {
+  #card-0[data-open="true"] #card-0-1-particles > polygon:nth-child(#{$i}) { 
+    animation-delay: -5s * $i;
+    animation-duration: 20s + $i;
+  }
+  #card-0[data-open="true"] #card-0-1-particles > ellipse:nth-child(#{$i}) { 
+    animation-delay: -4s * $i;
+    animation-duration: 21s + $i;
+  }
+  #card-0[data-open="true"] #card-0-1-particles > path:nth-child(#{$i}) { 
+    animation-delay: -4.5s * $i;
+    animation-duration: 22s + $i;
+  }
+
+  #card-0[data-open="true"] #card-0-2-particles > polygon:nth-child(#{$i}) { 
+    animation-delay: -6s * $i;
+    animation-duration: 20s + $i;
+  }
+  #card-0[data-open="true"] #card-0-2-particles > ellipse:nth-child(#{$i}) { 
+    animation-delay: -7s * $i;
+    animation-duration: 21s + $i;
+  }
+  #card-0[data-open="true"] #card-0-2-particles > path:nth-child(#{$i}) { 
+    animation-delay: -8s * $i;
+    animation-duration: 22s + $i;
+  }
+}
+
+
+// stars
+#card-0[data-open="true"] polygon {
+  // animation-name: rotate;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
+  // animation-direction: alternate;
   
-  animation-timing-function: ease;
-  animation-duration: 30s;
-  transform-origin: 50% 50%;
+  // animation-fill-mode: forwards;
+  
+  // animation-timing-function: ease;
+  // animation-duration: 30s;
+  // transform-origin: 50% 50%;
 }
 
 @keyframes rotate {
@@ -97,24 +129,23 @@
 
 // fufki
 #card-0[data-open="true"] path {
-  animation-name: scale;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  // animation-direction: alternate;
+  // animation-name: scale;
+  // animation-iteration-count: infinite;
+  // animation-direction: normal;
   
-  animation-fill-mode: forwards;
-  animation-fill-mode: backwards;
-  animation-fill-mode: both;
+  // animation-fill-mode: forwards;
+  // animation-fill-mode: backwards;
+  // animation-fill-mode: both;
   
-  animation-timing-function: ease-out;
-  animation-duration: 28s;
-  transform-origin: 50% 0%;
-  animation-delay: -2s;
+  // animation-timing-function: ease-out;
+  // animation-duration: 28s;
+  // transform-origin: 50% 0%;
+  // animation-delay: -2s;
 }
 
 // fufki right
 #card-0[data-open="true"] #card-0-2 path {
-  transform-origin: 50% 50%;
+  // transform-origin: 50% 50%;
 }
 
 @keyframes scale {

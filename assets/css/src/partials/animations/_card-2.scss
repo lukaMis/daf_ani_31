@@ -1,6 +1,6 @@
 
 
-#card-2 #card-2-0-cupcake {
+#contentWrapper[data-cardselected="false"] #card-2 #card-2-0-cupcake {
   animation-name: bounce;
   transform-origin: center bottom;
 
@@ -27,7 +27,7 @@
   }
 }
 
-#card-2 #card-2-0-cupcake-shadow {
+#contentWrapper[data-cardselected="false"] #card-2 #card-2-0-cupcake-shadow {
   animation-name: shrink;
   transform-origin: center center;
   -moz-transform-origin: 50% 85%;
@@ -133,7 +133,7 @@
 
 @for $i from 2 through 91 {
   #card-2[data-open="true"] #card-2-1-particles #card-2-1-particle-#{$i} { 
-    animation-delay: -1s * $i;
+    animation-delay: -5s * $i;
     animation-duration: 30s + $i;
   }
 }

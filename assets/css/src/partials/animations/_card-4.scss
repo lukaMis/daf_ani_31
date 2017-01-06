@@ -1,7 +1,9 @@
 
 
-#card-4 #card-4-0-gifts [id*="gift"] {
+// front page
+#contentWrapper[data-cardselected="false"] #card-4 #card-4-0-gifts [id*="gift"] {
   transform-origin: center top;
+  -moz-transform-origin: 222px 0px;
   animation-name: swing;
 
   
@@ -9,8 +11,20 @@
   animation-direction: normal;
   animation-fill-mode: forward;
 
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
   animation-duration: 10s;
+}
+#contentWrapper[data-cardselected="false"] #card-4 #card-4-0-gifts [id*="gift-0"] {
+  -moz-transform-origin: 93px 0px;
+}
+#contentWrapper[data-cardselected="false"] #card-4 #card-4-0-gifts [id*="gift-1"] {
+  -moz-transform-origin: 181px 0px;
+}
+#contentWrapper[data-cardselected="false"] #card-4 #card-4-0-gifts [id*="gift-2"] {
+  -moz-transform-origin: 285px 0px;
+}
+#contentWrapper[data-cardselected="false"] #card-4 #card-4-0-gifts [id*="gift-3"] {
+  -moz-transform-origin: 375px 0px;
 }
 
 @keyframes swing {
@@ -35,15 +49,78 @@
   }
 }
 
-#card-4-0-gift-0 {
+#contentWrapper[data-cardselected="false"] #card-4-0-gift-0 {
   animation-delay: -1s;
 }
-#card-4-0-gift-1 {
+#contentWrapper[data-cardselected="false"] #card-4-0-gift-1 {
   animation-delay: -2s;
 }
-#card-4-0-gift-2 {
+#contentWrapper[data-cardselected="false"] #card-4-0-gift-2 {
   animation-delay: -4s;
 }
-#card-4-0-gift-3 {
+#contentWrapper[data-cardselected="false"] #card-4-0-gift-3 {
   animation-delay: -5s;
+}
+
+#card-4[data-open="true"] #card-4-0-gifts [id*="gift"] {
+  animation-name: none;
+}
+
+
+
+// inside cards
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts [id*="gift"] {
+  transform-origin: center top;
+  animation-name: swing;
+
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: backward;
+
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+}
+
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts [id*="gift-0"] {
+  -moz-transform-origin: 93px 0px;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts [id*="gift-1"] {
+  -moz-transform-origin: 181px 0px;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts [id*="gift-2"] {
+  -moz-transform-origin: 285px 0px;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts [id*="gift-3"] {
+  -moz-transform-origin: 375px 0px;
+}
+
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts #card-4-1-gift-0 {
+  animation-delay: -1.4s;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts #card-4-1-gift-1 {
+  animation-delay: -2.6s;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts #card-4-1-gift-2 {
+  animation-delay: -3.1s;
+}
+#card-4[data-open="true"] #card-4-1 #card-4-1-gifts #card-4-1-gift-3 {
+  animation-delay: -4.6s;
+}
+
+
+#card-4[data-open="true"] #card-4-1-particles [id*="particle"] {
+  animation-name: rain;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  animation-timing-function: linear;
+  animation-duration: 20s;
+}
+
+@for $i from 0 through 42 {
+  #card-4[data-open="true"] #card-4-1-particles #card-4-1-particle-#{$i} { 
+    animation-delay: -5.256s * $i;
+    animation-duration: 21.567s + $i;
+  }
 }
