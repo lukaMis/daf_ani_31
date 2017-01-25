@@ -164,69 +164,6 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
 }
 
 
-
-// hover
-// .card .card-side:hover {
-//   transform: scale(1.05);
-//   transition: transform 0.3s ease;
-// }
-
-
-
-
-// #card-0 .card-side.front {
-//   background-image: url('../images/cards/card-0-0.svg');
-// }
-// #card-0 .card-side.left {
-//   background-image: url('../images/cards/card-0-1.svg');
-// }
-// #card-0 .card-side.right {
-//   background-image: url('../images/cards/card-0-2.svg');
-// }
-
-// #card-1 .card-side.front {
-//   background-image: url('../images/cards/card-1-0.svg');
-// }
-// #card-1 .card-side.left {
-//   background-image: url('../images/cards/card-1-1.svg');
-// }
-// #card-1 .card-side.right {
-//   background-image: url('../images/cards/card-1-2.svg');
-// }
-
-// #card-2 .card-side.front {
-//   background-image: url('../images/cards/card-2-0.svg');
-// }
-// #card-2 .card-side.left {
-//   background-image: url('../images/cards/card-2-1.svg');
-// }
-// #card-2 .card-side.right {
-//   background-image: url('../images/cards/card-2-2.svg');
-// }
-
-
-// #card-3 .card-side.front {
-//   background-image: url('../images/cards/card-3-0.svg');
-// }
-// #card-3 .card-side.left {
-//   background-image: url('../images/cards/card-3-1.svg');
-// }
-// #card-3 .card-side.right {
-//   background-image: url('../images/cards/card-3-2.svg');
-// }
-
-
-// #card-4 .card-side.front {
-//   background-image: url('../images/cards/card-4-0.svg');
-// }
-// #card-4 .card-side.left {
-//   background-image: url('../images/cards/card-4-1.svg');
-// }
-// #card-4 .card-side.right {
-//   background-image: url('../images/cards/card-4-2.svg');
-// }
-
-
 #card-0 {
   z-index: 5;
 }
@@ -265,4 +202,10 @@ $cardSideTransitionDuration: $cardTransitionDuration * 0.9;
   z-index: 1;
   border-radius: 50%;
   cursor: pointer;
+}
+
+
+// korekture ker se prekriva z close buttonom od m-avtorja.
+.card.close-button:after {
+  display: none;
 }
