@@ -14,14 +14,33 @@ daf_ani_31.TitleControl = (config) => {
     $('#contentWrapper').append(titleString);
   };
 
+
+  const createPlayButton = () => {
+    $('#wrapper').one('click', onPlayButtonClickHandler);
+    setTimeout(() => {
+      $('#wrapper').append('<div id="playButton"></div>');
+    }, 20);
+  };
+
+
+  const onPlayButtonClickHandler = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    $('#playButton').remove();
+
+    soundControl.play(instance.data.audio);
+  };
+
+
   /* API */
   instance.init = (data) => {
     instance.data = data;
     makeTitle(instance.data);
+    createPlayButton();
   };
-  instance.play = () => {
-    soundControl.play(instance.data.audio);
-  };
+  // instance.play = () => {
+  //   soundControl.play(instance.data.audio);
+  // };
 
   
   console.log('TitleControl ready');

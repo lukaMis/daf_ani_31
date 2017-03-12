@@ -9,7 +9,6 @@ daf_ani_31.Controller = (config) => {
 
 
   const onInit = () => {
-    titleControl.play();
     $(cardsControl).on('onCardIsOpen', onCardIsOpenHandler);
     $(cardsControl).on('onAudioCompleted', onAudioCompletedHandler);
   };
